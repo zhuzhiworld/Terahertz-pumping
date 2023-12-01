@@ -1,6 +1,6 @@
 # Terahertz-pumping
 
--------------------------------------------------------Simulation File Description-------------------------------------------------------
+-------------------------------------------Simulation File Description--------------------------------------------
 
 Completion of this example requires:
 NAMD 2.10 or later (http://ks.uiuc.edu/Research/namd); VMD 1.9.3 or later (http://ks.uiuc.edu/Research/vmd; using the latest version is recommended).
