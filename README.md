@@ -1,4 +1,4 @@
-# Terahertz-pumping
+This is a repository encompassing simulation model, analysis code code, and trajectory results over a short period of time. Theoretical experts and experimental colleagues can use this resource collection for further exploration
 
 ## Simulation File Description In Example
 
