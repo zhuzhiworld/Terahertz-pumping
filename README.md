@@ -9,15 +9,15 @@ NAMD 2.10 or later (http://ks.uiuc.edu/Research/namd); VMD 1.9.3 or later (http:
     
 2) mol.psf: This file describes the molecular system structure.
     
-par_nanochannel.prm: This file contains the parameters necessary for the molecular system to be simulated. The left-right wetting ratio of the nanochannel can be adjusted by setting the following parameters:
+3) par_nanochannel.prm: This file contains the parameters necessary for the molecular system to be simulated. The left-right wetting ratio of the nanochannel can be adjusted by setting the following parameters:
     
     CA     0.000000  -0.070000     1.992400
     CB     0.000000  -7.000000     1.992400
     
     
-3) fix.ref: The atoms with the beta value of 1 in this file is held fixed during the simulation.
+4) fix.ref: The atoms with the beta value of 1 in this file is held fixed during the simulation.
     
-4) run.conf: This file is the configuration file for running computational simulations. Running the calculation. The script for simulating the cosine transform electric field has been  added to this file, with the specific code and explanation as follows:
+5) run.conf: This file is the configuration file for running computational simulations. Running the calculation. The script for simulating the cosine transform electric field has been  added to this file, with the specific code and explanation as follows:
 
 ##########################################################
 
@@ -33,7 +33,7 @@ set Pi 3.1415926
 
 ###Set cosine electric field Et###
 
-set Et [expr $A*cos(0.002*$Pi*$*$step)]
+set Et [expr $Acos(0.002*$Pi*$*$step)]
 
 ####Excludes the carbon atom from future iterations on this processor###
 
@@ -65,12 +65,12 @@ addforce [vecscale {0 1 0} [expr $Et*$chge]]};  #along the y direction
 
 }
 
-tclBCArgs {4.6 27000};  #A=2 V/nm, =27 THz
+tclBCArgs {4.6 27000};  #A=2 V/nm, v=27 THz
 
 #############################################################
 
 
-5) out.dcd: This file stores the trajectory of all atom position coordinates.
+6) out.dcd: This file stores the trajectory of all atom position coordinates.
 ****
 ## Trajectory analysis code
 
