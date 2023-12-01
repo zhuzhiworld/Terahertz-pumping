@@ -6,28 +6,21 @@ Completion of this example requires:
 NAMD 2.10 or later (http://ks.uiuc.edu/Research/namd);
 VMD 1.9.3 or later (http://ks.uiuc.edu/Research/vmd; using the latest version is recommended).
 
-
 1. All distributions of this example include the following files:
 
 mol.pdb: This file contains initial position coordinate data.
     
 mol.psf: This file describes the molecular system structure.
     
-par_nanochannel.prm
-	This file contains the parameters necessary for the molecular system to be simulated.
-    The left-right wetting ratio of the nanochannel can be adjusted by setting the following parameters:
+par_nanochannel.prm: This file contains the parameters necessary for the molecular system to be simulated. The left-right wetting ratio of the nanochannel can be adjusted by setting the following parameters:
     
     CA     0.000000  -0.070000     1.992400
     CB     0.000000  -7.000000     1.992400
     
     
-fix.ref
-    The atoms with the beta value of 1 in this file is held fixed during the simulation.
+fix.ref: The atoms with the beta value of 1 in this file is held fixed during the simulation.
     
-run.conf
-    This file is the configuration file for running computational simulations.
-    Running the calculation. The script for simulating the cosine transform electric field has been 
-    added to this file, with the specific code and explanation as follows:
+run.conf: This file is the configuration file for running computational simulations. Running the calculation. The script for simulating the cosine transform electric field has been  added to this file, with the specific code and explanation as follows:
 ##########################################################
 tclBC		on
 tclBCScript {
@@ -58,11 +51,9 @@ Please refer to the Namd manual for the specific meaning of the tclBCScript para
 
 
 2. Trajectory analysis:
-out.dcd
-This file stores the trajectory of all atom position coordinates.
+out.dcd: This file stores the trajectory of all atom position coordinates.
 
-flow.tcl
-This is a code program that calls VMD software to analyze water flow, with the command "source com_flow.tcl".
+flow.tcl: This is a code program that calls VMD software to analyze water flow, with the command "source com_flow.tcl".
 
 3. Calculation of Water Molecule Infrared Spectrum. 
 The IR Spectral Density Calculator Plugin  in VMD software can also be used to compute IR spectral densities.
