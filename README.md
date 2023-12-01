@@ -1,5 +1,5 @@
 This is a repository encompassing simulation model, analysis code code, and trajectory results over a short period of time. Theoretical experts and experimental colleagues can use this resource collection for further exploration
-
+****
 ## Simulation File Description In Example
 
 Completion of this example requires:
@@ -69,18 +69,19 @@ tclBCArgs {4.6 27000};  #A=2 V/nm, =27 THz
 
 #############################################################
 
-Please refer to the Namd manual for the specific meaning of the tclBCScript parameter in the following code.
 
 5) out.dcd: This file stores the trajectory of all atom position coordinates.
-
+****
 ## Trajectory analysis code
 
 flow.tcl: This is a code program that calls VMD software to analyze water flow, with the command "source com_flow.tcl".
 
+Please refer to the Namd manual for the specific meaning of the tclBCScript parameter in the above code.
+****
 ## Calculation of Water Molecule Infrared Spectrum
 
 The IR Spectral Density Calculator Plugin  in VMD software can also be used to compute IR spectral densities.
-
+****
 ## Reference
 
 Qi-Lin Zhang, Tong Zhou, Chao Chang, Shi-Yu Gu, Yun-Jie Wang, Qi Liu, and Zhi Zhu, Physical Review Letters, Under review, ID: LJ18210
