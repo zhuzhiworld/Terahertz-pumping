@@ -23,28 +23,50 @@ fix.ref: The atoms with the beta value of 1 in this file is held fixed during th
 run.conf: This file is the configuration file for running computational simulations. Running the calculation. The script for simulating the cosine transform electric field has been  added to this file, with the specific code and explanation as follows:
 ##########################################################
 tclBC		on
+
 tclBCScript {
+
 proc calcforces {step unique A } {
+
 global A 
+
 set Pi 3.1415926
+
 ###Set cosine electric field Et###
+
 set Et [expr $A*cos(0.002*$Pi*$*$step)]
+
 ### Excludes the carbon atom from future iterations on this processor###
-  while {[nextatom]} { 
+while {[nextatom]} { 
+
 set chge [getcharge]
+
 if { $chge == 0.0 } {
+
 dropatom
+
 continue
+
 }
+
 ###Apply the E(t) only to the water inside the nanochannel (35>=z>=-35 angstrom )##
+
 set var [getcoord]
+
 set z_coord  [lindex $var 2 ] ;# get the z-coordinate of the atom
+
 if {$z_coord>=-35 && $z_coord <=35 } {
+
 addforce [vecscale {0 1 0} [expr $Et*$chge]]} ;#along the y direction
+
 }
+
 }
+
 }
+
 tclBCArgs {4.6 27000};#A=2 V/nm, =27 THz
+
 #############################################################
 
 Please refer to the Namd manual for the specific meaning of the tclBCScript parameter in the following code.
