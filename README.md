@@ -30,7 +30,7 @@ proc calcforces {step unique E0 v} {
 
 ###Set cosine electric field Et###
 
-set [expr $E0 * cos(($step) * (0.0062831852) * $v)]
+set Et [expr $E0 * cos(($step) * (0.0062831852) * $v)]
 
 ####Excludes the carbon atom from future iterations on this processor###
 
