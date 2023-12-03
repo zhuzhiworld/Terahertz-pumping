@@ -26,15 +26,11 @@ tclBC		on
 
 tclBCScript {
 
-proc calcforces {step unique A } {
-
-global A 
-
-set Pi 3.1415926
+proc calcforces {step unique E0 v} {
 
 ###Set cosine electric field Et###
 
-set [expr $E0*sin(($step)*0.0062831852*$v)]
+set [expr $E0*cos(($\rm{step})*(0.0062831852)*$v)]
 
 ####Excludes the carbon atom from future iterations on this processor###
 
