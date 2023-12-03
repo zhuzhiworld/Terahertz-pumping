@@ -33,7 +33,7 @@ set Pi 3.1415926
 
 ###Set cosine electric field Et###
 
-set Et [expr $Acos(0.002*$Pi*$*$step)]
+set [expr $E0*sin(($step)*0.0062831852*$v)]
 
 ####Excludes the carbon atom from future iterations on this processor###
 
@@ -41,7 +41,7 @@ while {[nextatom]} {
 
 set chge [getcharge]
 
-if { $chge == 0.0 } {
+if { $chge == 0.000000 } {
 
 dropatom
 
@@ -65,12 +65,12 @@ addforce [vecscale {0 1 0} [expr $Et*$chge]]};  #along the y direction
 
 }
 
-tclBCArgs {4.6 27000};  #A=2 V/nm, v=27 THz
+tclBCArgs {4.6 27}  ;#2V/nm, 27THz
 
 #############################################################
 
 
-6) out.dcd: This file stores the trajectory of all atom position coordinates.
+6) out.dcd: This file stores the trajectory of all atoms' position coordinates.
 ****
 ## Trajectory analysis code
 
