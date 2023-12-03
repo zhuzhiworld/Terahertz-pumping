@@ -12,12 +12,13 @@ NAMD 2.10 or later (http://ks.uiuc.edu/Research/namd); VMD 1.9.3 or later (http:
 3) par_nanochannel.prm: This file contains the parameters necessary for the molecular system to be simulated. The left-right wetting ratio of the nanochannel can be adjusted by setting the following parameters:
     
     CA     0.000000  -0.070000     1.992400
+   
     CB     0.000000  -7.000000     1.992400
     
     
-4) fix.ref: The atoms with the beta value of 1 in this file is held fixed during the simulation.
+5) fix.ref: The atoms with the beta value of 1 in this file is held fixed during the simulation.
     
-5) run.conf: This file is the configuration file for running computational simulations. Running the calculation. The script for simulating the cosine transform electric field has been  added to this file, with the specific code and explanation as follows:
+6) run.conf: This file is the configuration file for running computational simulations. Running the calculation. The script for simulating the cosine transform electric field has been  added to this file, with the specific code and explanation as follows:
 
 ##########################################################
 
